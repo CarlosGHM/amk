@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>AMK Technologies</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+</head>
+
+<body ng-app="app" ng-cloak layout="column">
+  <md-toolbar layout="row" ng-controller="HomeController as homeCtrl">
+    <md-button class="menu" hide-gt-sm ng-click="homeCtrl.toggleUsersList();">
+    </md-button>
+    <h3>AMK Technologies</h3>
+  </md-toolbar>
+  <div ui-view flex></div>
+
+</body>
+<script src="bundle.js"></script>
+
+</html>

@@ -1,0 +1,26 @@
+.users-container{
+  margin-top: 20px;
+}
+.card-sub{
+  margin-left: 10px;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+.card-header-image {
+  background-image: url('https://d3kq2xhl2rew87.cloudfront.net/user/image/6/4/6/250x250/cool_cat_ylXlpig.jpg');
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.card-name {
+  text-align: justify;
+  font-weight: bold;
+  width: 100%;
+}
+
+.card-user {
+  width: 400px;
+  height: 100%;
+}

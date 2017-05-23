@@ -1,0 +1,13 @@
+<md-content class="login-content">
+  <div class="login-container">
+    <md-input-container>
+      <input required mdInput placeholder="Usuario" autofocus=true type="text" ng-model="ctrl.username" />
+    </md-input-container>
+    <br/>
+    <md-input-container>
+      <input required mdInput placeholder="Contrasena" type="password" ng-model="ctrl.password" />
+    </md-input-container>
+    <br>
+    <button md-button ng-click="ctrl.login()" color="primary">Iniciar Sesión</button>
+  </div>
+</md-content>

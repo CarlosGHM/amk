@@ -1,0 +1,15 @@
+.clubes-container{
+  margin-top: 10px;
+}
+
+.item-club{
+  width: 250px;
+  height: 150px;
+  cursor: pointer;
+}
+
+.item-text{
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+}

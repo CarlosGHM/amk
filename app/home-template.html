@@ -1,0 +1,14 @@
+<div layout="row" class="container">
+  <md-sidenav class="home-sidenav" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" flex="15">
+    <md-content class="home-sidenav">
+      <md-list>
+        <md-list-item> <a ng-click="homeCtrl.toggleUsersList();homeCtrl.logout();" ui-sref="login">Cerrar Sesión</a> </md-list-item>
+        <md-list-item> <a ng-click="homeCtrl.toggleUsersList();" ui-sref="home.clubes">Clubes</a> </md-list-item>
+        <md-list-item> <a ng-click="homeCtrl.toggleUsersList();" ui-sref="home.suscribers">Suscriptores</a> </md-list-item>
+      </md-list>
+    </md-content>
+  </md-sidenav>
+  <md-content flex id="content" class="md-whiteframe-6dp home-content">
+    <div ui-view flex></div>
+  </md-content>
+</div>
