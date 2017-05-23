@@ -12,8 +12,8 @@ export default ngModule => {
         });
         $scope.getClubeDetail = function (clube) {
           $state.go('home.clube', { clube: clube, id: clube.id });
-        }
+        };
       }
     };
   });
-} 
+}; 

@@ -12,8 +12,8 @@ export default ngModule => {
         });
         $scope.getSuscriberDetail = function (suscriber) {
           $state.go('home.suscriber', { suscriptor: suscriber, id: suscriber.id });
-        }
+        };
       }
     };
   });
-} 
+}; 

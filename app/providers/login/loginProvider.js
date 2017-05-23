@@ -2,16 +2,14 @@ export default ngModule => {
   ngModule.provider('userLogin', function LoginProvider() {
 
     function saveToLocalStorage(username) {
-      localStorage.userInfo = JSON.stringify({ username });
+      localStorage.userInfo = angular.toJson({username});
     }
 
     function isLoggedIn() {
-      const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+      const userInfo = angular.fromJson(localStorage.getItem('userInfo'));
       if (userInfo && userInfo.username === 'admin') {
-        console.log('El usuario está logueado');
         return true;
       } else {
-        console.log('El usuario NO está logueado');
         return false;
       }
     }
@@ -33,7 +31,7 @@ export default ngModule => {
       return ({
        
       });
-    };
+    }
 
     return ({
       login: login,
@@ -42,4 +40,4 @@ export default ngModule => {
       $get: instantiateLoginProvider
     });
   });
-}
+};

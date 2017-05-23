@@ -1,5 +1,5 @@
- export default ngModule => {
-  ngModule.service('userService', function ($http) {
+export default ngModule => {
+  ngModule.factory('userService', function ($http) {
     const URLS = {
       GET: 'https://jsonplaceholder.typicode.com/users'
     };
@@ -14,8 +14,13 @@
       return users;
     }
 
-    this.getUsers = function () {
+    const getUsers = function () {
       return $http.get(URLS.GET).then(cacheData);
-    }
+    };
+
+    return {
+      getUsers
+    };
+
   });
-}
+};

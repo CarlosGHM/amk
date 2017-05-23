@@ -1,30 +1,36 @@
 export default ngModule => {
-  ngModule.service('loginService', function () {
+  ngModule.factory('loginService', function () {
 
     function saveToLocalStorage(username) {
-      localStorage.userInfo = JSON.stringify({ username });
+      localStorage.userInfo = angular.toJson({ username });
     }
 
-    this.isLoggedIn = function() {
-      const userInfo = JSON.parse(localStorage.getItem('userInfo'));
-      if( userInfo && userInfo.username === 'admin'){
+    const isLoggedIn = function () {
+      const userInfo = angular.fromJson(localStorage.getItem('userInfo'));
+      if (userInfo && userInfo.username === 'admin') {
         return true;
       } else {
         return false;
       }
-    }
+    };
 
-    this.logout = function() {
+    const logout = function () {
       localStorage.clear();
-    }
+    };
 
-    this.login = function (username, password) {
+    const login = function (username, password) {
       if (username === 'admin' && password === '123456') {
         saveToLocalStorage(username);
         return true;
       } else {
         return false;
       }
-    }
+    };
+
+    return {
+      login,
+      logout,
+      isLoggedIn
+    };
   });
-}
+};

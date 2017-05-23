@@ -1,5 +1,5 @@
 export default ngModule => {
-  ngModule.service('clubesService', function ($http) {
+  ngModule.factory('clubesService', function ($http) {
     const URLS = {
       GET: 'https://jsonplaceholder.typicode.com/posts'
     };
@@ -14,8 +14,13 @@ export default ngModule => {
       return clubes;
     }
 
-    this.getClubes = function () {
+    const getClubes = function () {
       return $http.get(URLS.GET).then(cacheData);
-    }
+    };
+
+    return {
+      getClubes
+    };
+
   });
-}
+};

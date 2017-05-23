@@ -1,11 +1,11 @@
 export default ngModule => {
   ngModule.controller('HomeController', function ($mdSidenav, loginService) {
-
-    this.toggleUsersList = function() {
+    const vm = this;
+    vm.toggleUsersList = function () {
       $mdSidenav('left').toggle();
-    }
-    this.logout = function(){
+    };
+    vm.logout = function () {
       loginService.logout();
-    }
+    };
   });
-}
+};

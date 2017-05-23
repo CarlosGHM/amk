@@ -8,8 +8,7 @@ export default ngModule => {
       controller: function ($scope, $stateParams) {
         $scope.clube = $stateParams.clube;
         $scope.id = $stateParams.id;
-        console.log($scope.clube);
       }
     };
   });
-} 
+}; 

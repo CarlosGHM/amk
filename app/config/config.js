@@ -44,10 +44,5 @@ export default ngModule => {
     });
     $urlRouterProvider.otherwise('home');
     $locationProvider.html5Mode(true);
-
-    // const rootURL = "https://rawgit.com/angular/material-start/es5-tutorial/app/";
-    // $mdIconProvider.defaultIconSet(rootURL + "assets/svg/avatars.svg", 128)
-    //   .icon("menu", rootURL + "assets/svg/menu.svg", 24);
-
   });
-}
+};
