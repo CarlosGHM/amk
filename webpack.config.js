@@ -5,6 +5,7 @@ const config = {
   entry: './index.js',
   output: {
     path: __dirname + '/app',
+    publicPath: '/amk/dist/',
     filename: 'bundle.js'
   },
   plugins: [],
