@@ -7,5 +7,9 @@ export default ngModule => {
     vm.logout = function () {
       loginService.logout();
     };
+
+    vm.isUserLoggedIn = function() {
+      return loginService.isLoggedIn();
+    };
   });
 };

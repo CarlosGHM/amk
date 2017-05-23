@@ -1,5 +1,5 @@
 export default ngModule => {
-  ngModule.config(function ($stateProvider, $locationProvider, $mdIconProvider, $urlRouterProvider, userLoginProvider) {
+  ngModule.config(function ($stateProvider, $locationProvider, $mdThemingProvider, $urlRouterProvider, userLoginProvider) {
 
     function validateUserCredentials() {
       if (!userLoginProvider.isLoggedIn()) {
@@ -44,5 +44,6 @@ export default ngModule => {
     });
     $urlRouterProvider.otherwise('home');
     $locationProvider.html5Mode(true);
+    $mdThemingProvider.theme('default');
   });
 };

@@ -21,11 +21,28 @@ md-toolbar h3 {
   padding-top: 5px;
 }
 
-
-.home-sidenav {
-  /*background-color: transparent;*/
+.button-logout {
+  width: 100%;
 }
 
-.home-content {
-  /*background-color: transparent;*/
+.img-menu {
+  height: 50px;
+  width: 50px;
+}
+
+a {
+  color:rgb(62, 78, 184);
+}
+a:visited {
+  color: rgb(62, 78, 184);
+}
+a:hover {
+  font-weight: bold;
+  color:rgb(62, 78, 184);
+}
+
+.active { 
+  color: rgb(62, 78, 184); 
+  font-weight: bolder; 
+  font-size: 13pt;
 }
