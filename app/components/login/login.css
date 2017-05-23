@@ -1,13 +1,16 @@
 .login-container {
   margin: 0 auto;
-  width: 10%;
 }
 
-.button-container {
-  margin: 0 auto;
-  width: 10%;
+.button-login {
+  background-color: rgb(62,74,184);
+  color: white;
+}
+
+.button-login:hover {
+  color: black;
 }
 
 .login-content {
-  margin-top: 10px
+  margin-top: 20px
 }

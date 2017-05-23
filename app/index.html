@@ -6,12 +6,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <base href="/">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body ng-app="app" ng-cloak layout="column">
   <md-toolbar layout="row" ng-controller="HomeController as homeCtrl">
-    <md-button class="menu" hide-gt-sm ng-click="homeCtrl.toggleUsersList();">
-    </md-button>
+    <md-container ng-show="homeCtrl.isUserLoggedIn()">
+      <md-button class="menu" hide-gt-sm ng-click="homeCtrl.toggleUsersList();">
+        <md-icon md-font-icon="fa-bars">menu</md-icon>
+      </md-button>
+    </md-container>
     <h3>AMK Technologies</h3>
   </md-toolbar>
   <div ui-view flex></div>

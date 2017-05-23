@@ -6,14 +6,18 @@ export default ngModule => {
       scope: {},
       template: require('./login.html'),
       controllerAs: 'ctrl',
-      controller: function ($state, loginService) {
+      controller: function ($state, $mdDialog, loginService) {
         const ctrl = this;
         loginService.isLoggedIn();
         ctrl.login = function () {
-          if(loginService.login(ctrl.username, ctrl.password)) {
+          if (loginService.login(ctrl.username, ctrl.password)) {
             $state.go('home.clubes');
           } else {
-            //console.log('Username or password incorrect');
+            $mdDialog.show(
+              $mdDialog.alert()
+                .textContent('Usuario o password incorrectos')
+                .ok('Aceptar')
+            );
           }
         };
       }
